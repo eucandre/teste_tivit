@@ -14,6 +14,7 @@ Este é um projeto FastAPI que implementa autenticação básica com JWT, banco 
 - [Execução do Projeto](#execução-do-projeto)
 - [Testes e Cobertura de Código](#testes-e-cobertura-de-código)
 - [Estilo de Código](#estilo-de-código)
+- [Utilização da API](#utilizacao-da-api)
 
 ## Pré-requisitos
 
@@ -65,6 +66,8 @@ Este é um projeto FastAPI que implementa autenticação básica com JWT, banco 
 
 ## Execução do Projeto
 
+Execute ppython create_users.py na raiz do projeto
+
 Para iniciar o servidor FastAPI, use o comando:
 
 ```
@@ -108,6 +111,13 @@ Para executar o `flake8` em seu código, utilize:
 ```
 flake8 app/
 ```
+
+---
+
+## Utilização da API
+1. curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/json" -d '{"username": "user", "password": "L0XuwPOdS5U"}'
+2. curl -X GET "http://127.0.0.1:8000/user" -H "Authorization: Bearer <seu_token_aqui>"
+3. curl -X GET "http://127.0.0.1:8000/admin" -H "Authorization: Bearer <seu_token_aqui>"
 
 ---
 
